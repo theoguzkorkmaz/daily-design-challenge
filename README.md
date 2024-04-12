@@ -1,4 +1,5 @@
 # DAILY DESIGN CHALLENGE - tailwindcss
 
-### 12 APRIL
-<img src="https://github.com/theoguzkorkmaz/daily-desing-challenge/blob/main/images/12_april.png" width="auto" height="150px"></img><br><br>
+### I started at 12 APRIL
+
+You can reach from <a href="https://theoguzkorkmaz.github.io/daily-design-challenge/index.html" target="_blank">this link</a>.
