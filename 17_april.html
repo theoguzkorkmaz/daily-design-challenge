@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+</head>
+<body>
+  <nav class="bg-gray-100">
+    <div class="container mx-auto px-6 py-3 md:flex md:justify-between md:items-center">
+      <div class="flex items-center justify-between">
+        <a class="text-gray-700 text-xl font-semibold flex flex-row gap-x-2 font-mono" href="#">
+          <span class="text-white bg-gradient-to-r from-red-400 to-blue-400 px-2 rounded-lg border-b-4 border-l-4 border-red-300">A</span>
+          <span>Blog</span>
+        </a>
+        <button id="menu-toggle" class="text-gray-500 focus:outline-none focus:text-gray-500 md:hidden">
+          <span class="mdi mdi-menu"></span>
+        </button>
+      </div>
+      <div id="menu" class="flex flex-col items-start gap-4 py-4 md:py-2 md:flex-row md:items-center hidden md:flex font-light lowercase">
+        <a class="text-gray-500 hover:text-gray-300" href="#">Anasayfa</a>
+        <a class="text-gray-500 hover:text-gray-300" href="#">Hakkımızda</a>
+        <a class="text-gray-500 hover:text-gray-300" href="#">Blog</a>
+        <a class="text-gray-500 hover:text-gray-300" href="#">iletişim</a>
+        <button class="bg-gray-700 text-white font-bold py-1 px-3 rounded-lg text-sm font-bold">Abone Ol</button>
+      </div>
+    </div>
+  </nav>
+  
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      document.getElementById('menu').classList.toggle('hidden');
+    });
+  
+    window.addEventListener('click', function(e) {
+      if (!document.getElementById('menu').contains(e.target) && !document.getElementById('menu-toggle').contains(e.target)) {
+        document.getElementById('menu').classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
